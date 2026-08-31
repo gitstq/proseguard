@@ -1,0 +1,8 @@
+{
+  "disable": ["PG400", "PG401"],
+  "max_sentence_words": 28,
+  "readability_grade": 12,
+  "personal_dictionary": ["proseguard", "linter", "pythonic"],
+  "extensions": [".md", ".txt", ".rst"],
+  "excludes": ["draft", "vendor"]
+}
