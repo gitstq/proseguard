@@ -1,0 +1,9 @@
+# ProseGuard has ZERO runtime third-party dependencies.
+# It runs on the Python standard library alone (Python >= 3.9).
+#
+# For development convenience you may optionally install pytest, but the
+# bundled test-suite also runs without it:
+#
+#   python -m unittest discover -s tests -v
+#
+# pytest>=7.0  # optional, only needed for `pytest`-based runs

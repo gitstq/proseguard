@@ -1,0 +1,28 @@
+name: Bug report
+description: Report a false positive, false negative or crash
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: snippet
+    attributes:
+      label: Source text that triggers the issue
+      placeholder: Paste the exact sentence(s) here
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: proseguard --version
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior / CLI output
