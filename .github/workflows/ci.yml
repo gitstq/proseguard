@@ -25,4 +25,10 @@ jobs:
       - name: CLI smoke test
         run: |
           PYTHONPATH=src python -m proseguard --list-rules
-          echo "This is definately wrong." | PYTHONPATH=src python -m proseguard - ; test $? -eq 1
+          # Findings must yield exit code 1; tolerate it under `set -e`.
+          set +e
+          echo "This is definately wrong." | PYTHONPATH=src python -m proseguard - >/dev/null
+          rc=${PIPESTATUS[1]}
+          set -e
+          echo "smoke exit code: $rc"
+          test "$rc" -eq 1
